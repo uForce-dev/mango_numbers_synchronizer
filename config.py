@@ -5,10 +5,6 @@ from pydantic import Field
 class Settings(BaseSettings):
     mango_api_key: str = Field(..., description="Mango Office API key")
     mango_salt: str = Field(..., description="Salt for request signature")
-    mango_api_url: str = Field(
-        default="https://app.mango-office.ru/vpbx/trunks/numbers",
-        description="Mango Office API URL",
-    )
 
     postgres_host: str = Field(default="localhost", description="PostgreSQL host")
     postgres_port: int = Field(default=5432, description="PostgreSQL port")

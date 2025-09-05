@@ -17,7 +17,7 @@ Base = declarative_base()
 
 
 class PhoneNumberTable(Base):
-    __tablename__ = "phone_numbers"
+    __tablename__ = "mango_office__phone_numbers"
 
     line_id = Column(Integer, primary_key=True)
     number = Column(String(20), unique=True, nullable=False, index=True)
